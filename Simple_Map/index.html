@@ -6,25 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaflet-Basic-Map</title>
     <!-- Leaflet CSS -->
+   <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+   -->
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <!--
+        <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+
+    -->    
 
         <!-- Our CSS -->
     <link rel="stylesheet" type="text/css" href="../Simple_Map/static/css/style.css">
 </head>
 <body>
-    <!-- The div that holds our map -->
-    <div id="mapid"></div>
+  <h1> testing </h1>
 
-    <!-- Leaflet JavaScript -->
+
+    <!-- The div that holds our map -->
+    <div id="mapid">
+        
+    </div>
+
+    <!-- testing-->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
-        <!-- API key -->
+
+
+
+
+        
+    <script>
+
+        let map = L.map('mapid').setView([40.7, -94.5], 4);
+       // var map = L.map('mapid').setView([51.505, -0.09], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}', {
+        maxZoom: 19,
+       // attribution: '© OpenStreetMap'
+}).addTo(map);
+
+    // We create the tile layer that will be the background of our map.
+    let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        //id: 'mapbox/streets-v11',
+       // id: mapbox/outdoors-v11,
+        //id: mapbox/light-v10,
+        //id: mapbox/dark-v10,
+        //id: mapbox/satellite-v9,
+        //id: mapbox/satellite-streets-v11,
+       // tileSize: 512,
+        //zoomOffset: -1,
+        accessToken: API_KEY
+    });
+    // Then we add our 'graymap' tile layer to the map.
+    streets.addTo(map);
+
+    </script>
+
+    <!-- API key -->
     <script type="text/javascript" src="../Simple_Map/static/js/config.js"></script>
     <!-- Our JavaScript -->
     <script type="text/javascript" src="../Simple_Map/static/js/logic.js"></script>
+
         
     
 </body>
