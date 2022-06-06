@@ -9,19 +9,19 @@
     - The additional requested map.
     
     
- # The folder structure or tree is as follows.
+ ## The folder structure or tree is as follows.
  
  ![](https://github.com/urvish7/Mapping_Earthquakes/blob/main/ScreenShots/TheFolderStructure.png)
     
- # Deliverable 1: Add Tectonic Plate Data
+ ## Deliverable 1: Add Tectonic Plate Data
  
  ![](https://github.com/urvish7/Mapping_Earthquakes/blob/main/ScreenShots/D1.png)
  
  
- # Deliverable 2: Add Major Earthquake
+ ## Deliverable 2: Add Major Earthquake
  
  ![](https://github.com/urvish7/Mapping_Earthquakes/blob/main/ScreenShots/D2.png)
  
- # Deliverable 3: Add an Additional Map
+ ## Deliverable 3: Add an Additional Map
  
  ![](https://github.com/urvish7/Mapping_Earthquakes/blob/main/ScreenShots/d3.png)
